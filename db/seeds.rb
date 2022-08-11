@@ -19,8 +19,8 @@ user_ids = User.pluck(:id)
 
 1000.times do
   Post.create(
-    title: Faker::Lorem.sentence(1),
-    content: Faker::Lorem.sentence(3),
+    title: Faker::Lorem.sentence(word_count: 1),
+    content: Faker::Lorem.sentence(word_count: 3),
     user_id: user_ids.sample
   )
 end
